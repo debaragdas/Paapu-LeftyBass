@@ -1,6 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
     
-    // 1. Mobile Menu Toggle
+    // Navbar Scroll Effect
+    window.addEventListener('scroll', () => {
+        const nav = document.getElementById('navbar');
+        if (window.scrollY > 50) {
+            nav.classList.add('bg-[#0a0a0a]', 'shadow-lg');
+            nav.classList.remove('glass-card');
+        } else {
+            nav.classList.remove('bg-[#0a0a0a]', 'shadow-lg');
+            nav.classList.add('glass-card');
+        }
+    });
+
+    // Mobile Menu Toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const navLinks = document.querySelector('.hidden.md\\:flex');
     
@@ -16,12 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
         navLinks.classList.toggle('p-6');
     });
 
-    // 2. Fetch and Render Live Shows
+    // Fetch and Render Live Shows
     fetch('shows.json')
         .then(response => response.json())
         .then(data => {
             const container = document.getElementById('shows-container');
-            container.innerHTML = ''; // Clear loading text
+            container.innerHTML = ''; 
 
             data.forEach(show => {
                 const buttonClass = show.status === "Sold Out" 
@@ -49,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }).catch(err => console.error("Error loading shows:", err));
 
-    // 3. Fetch and Render Books
+    // Fetch and Render Books
     fetch('books.json')
         .then(response => response.json())
         .then(data => {
@@ -58,13 +70,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
             data.forEach(book => {
                 const bookHTML = `
-                    <div class="glass-card flex flex-col sm:flex-row rounded-lg overflow-hidden hover:shadow-2xl transition duration-300">
+                    <div class="glass-card flex flex-col sm:flex-row rounded-lg overflow-hidden hover:shadow-2xl transition duration-300 max-w-2xl mx-auto">
                         <img src="${book.coverImage}" alt="${book.title}" class="w-full sm:w-48 h-64 object-cover">
                         <div class="p-6 flex flex-col justify-center">
                             <h3 class="text-2xl font-bold heading-font mb-3">${book.title}</h3>
                             <p class="text-gray-400 mb-6 text-sm leading-relaxed">${book.description}</p>
-                            <a href="${book.link}" class="text-[#eab308] hover:text-white font-bold uppercase tracking-wider text-sm transition flex items-center gap-2">
-                                Read More <i class="fas fa-arrow-right"></i>
+                            <a href="${book.link}" target="_blank" class="text-[#eab308] hover:text-white font-bold uppercase tracking-wider text-sm transition flex items-center gap-2">
+                                Get The Book <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -73,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }).catch(err => console.error("Error loading books:", err));
 
-    // 4. Fetch and Render Media (YouTube Reels)
+    // Fetch and Render Instagram Reels
     fetch('reels.json')
         .then(response => response.json())
         .then(data => {
@@ -82,23 +94,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
             data.forEach(reel => {
                 const reelHTML = `
-                    <div class="glass-card rounded-lg overflow-hidden border border-gray-800 hover:border-[#eab308] transition duration-300">
-                        <div class="relative pb-[56.25%] h-0">
-                            <iframe 
-                                src="https://www.youtube.com/embed/${reel.videoId}?controls=1" 
-                                class="absolute top-0 left-0 w-full h-full"
-                                title="${reel.title}" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                        <div class="p-4 bg-[#111]">
-                            <h4 class="text-white font-semibold text-sm heading-font tracking-wide">${reel.title}</h4>
-                        </div>
+                    <div class="glass-card rounded-lg overflow-hidden border border-gray-800 hover:border-[#eab308] transition duration-300 p-2 flex justify-center bg-white/5">
+                        ${reel.embedCode} 
                     </div>
                 `;
                 container.innerHTML += reelHTML;
             });
+
+            // Tell Instagram to process the injected embed scripts
+            if (window.instgrm) {
+                window.instgrm.Embeds.process();
+            }
         }).catch(err => console.error("Error loading reels:", err));
 });
