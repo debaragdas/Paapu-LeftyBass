@@ -1,17 +1,14 @@
 [
     {
-        "title": "Live Bass Solo in Mumbai",
-        "videoId": "VlVbFqferAY",
-        "platform": "YouTube"
+        "title": "Bass DJ Project Highlight 1",
+        "embedCode": "<blockquote class='instagram-media' data-instgrm-permalink='https://www.instagram.com/p/YOUR_REEL_LINK_HERE/' data-instgrm-version='14' style=' background:#FFF; border:0; margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);'></blockquote><script async src='//www.instagram.com/embed.js'></script>"
     },
     {
-        "title": "My News NE Interview",
-        "videoId": "VaK_qmCxJVA",
-        "platform": "YouTube"
+        "title": "Bass DJ Project Highlight 2",
+        "embedCode": "<blockquote class='instagram-media' data-instgrm-permalink='https://www.instagram.com/p/YOUR_REEL_LINK_HERE_2/' data-instgrm-version='14' style=' background:#FFF; border:0; margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);'></blockquote><script async src='//www.instagram.com/embed.js'></script>"
     },
     {
-        "title": "Studio Session with Ableton",
-        "videoId": "dQw4w9WgXcQ", 
-        "platform": "YouTube"
+        "title": "Live Studio Session",
+        "embedCode": "<blockquote class='instagram-media' data-instgrm-permalink='https://www.instagram.com/p/YOUR_REEL_LINK_HERE_3/' data-instgrm-version='14' style=' background:#FFF; border:0; margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);'></blockquote><script async src='//www.instagram.com/embed.js'></script>"
     }
 ]
