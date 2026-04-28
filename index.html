@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papu Leftybass | Bassist, Composer & Author</title>
+    <meta name="description" content="Official website of Papu Leftybass. Left-handed Bass Guitarist, Music Composer, and Author from Assam, India.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Custom Styles to augment Tailwind */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #f3f4f6;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, .heading-font {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .hero-bg {
+            /* Placeholder for a high-res, dark stage/studio image of him playing */
+            background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.9)), url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=2070&auto=format&fit=crop') center/cover;
+            height: 100vh;
+        }
+        .accent-color {
+            color: #eab308; /* A warm gold/yellow accent to pop against the dark theme */
+        }
+        .bg-accent {
+            background-color: #eab308;
+        }
+        .hover-accent:hover {
+            color: #eab308;
+            transition: color 0.3s ease;
+        }
+        /* JSON Container Styles */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed w-full z-50 glass-card py-4 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-2xl heading-font font-bold tracking-wider">Papu <span class="accent-color">Leftybass</span></a>
+            <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-semibold">
+                <a href="#about" class="hover-accent">About</a>
+                <a href="#shows" class="hover-accent">Live Shows</a>
+                <a href="#media" class="hover-accent">Reels & Media</a>
+                <a href="#books" class="hover-accent">Books</a>
+                <a href="#contact" class="hover-accent">Bookings</a>
+            </div>
+            <button class="md:hidden text-2xl focus:outline-none" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-bg flex items-center justify-center text-center px-6 pt-20">
+        <div class="max-w-4xl">
+            <p class="text-sm md:text-lg uppercase tracking-[0.3em] text-gray-400 mb-4">Bass DJ | Ableton Live Looper | Session Artist</p>
+            <h1 class="text-6xl md:text-8xl font-bold mb-6">THE RHYTHM <br><span class="accent-color">OF THE SOUL</span></h1>
+            <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">From the heart of Assam to the stages of Mumbai. Experience the groove of India's premier left-handed bass guitarist and composer.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-accent text-black font-bold uppercase tracking-wider py-3 px-8 rounded hover:bg-yellow-400 transition duration-300">Book for Shows</a>
+                <a href="#media" class="glass-card border border-white text-white font-bold uppercase tracking-wider py-3 px-8 rounded hover:bg-white hover:text-black transition duration-300">Watch Reels</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 px-6 bg-[#111]">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1598387181032-a3103a2db5b3?q=80&w=2076&auto=format&fit=crop" alt="Papu Leftybass" class="rounded-lg shadow-2xl w-full object-cover h-[500px] grayscale hover:grayscale-0 transition duration-500">
+            </div>
+            <div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">The <span class="accent-color">Journey</span></h2>
+                <p class="text-gray-400 mb-4 leading-relaxed text-lg">
+                    Hailing from Nagaon, Assam, Papu Leftybass has carved a unique niche in the Indian music industry. Known for his signature left-handed playing style, his journey is a testament to dedication and rhythm.
+                </p>
+                <p class="text-gray-400 mb-6 leading-relaxed text-lg">
+                    Moving to Mumbai, he established himself as a versatile session musician, live performer, and music producer. From collaborating with Indie Routes at the NCPA auditorium to producing tracks as a Bass DJ with Ableton Live Looping, his musical footprint spans regional Assamese roots and mainstream Bollywood soundscapes. He is not just a musician; he is an author sharing the profound experiences of an artist's path.
+                </p>
+                <div class="grid grid-cols-2 gap-6 mt-8 border-t border-gray-800 pt-8">
+                    <div>
+                        <h4 class="heading-font text-2xl accent-color">10+</h4>
+                        <p class="text-sm text-gray-500 uppercase tracking-wider mt-1">Years Experience</p>
+                    </div>
+                    <div>
+                        <h4 class="heading-font text-2xl accent-color">Live</h4>
+                        <p class="text-sm text-gray-500 uppercase tracking-wider mt-1">Looping & DJ Sets</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="shows" class="py-24 px-6 bg-[#0a0a0a]">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold">Upcoming <span class="accent-color">Gigs</span></h2>
+                <p class="text-gray-400 mt-4">Catch the live energy across India.</p>
+            </div>
+            <div id="shows-container" class="space-y-4">
+                <div class="glass-card p-6 rounded flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4">
+                    <p class="text-gray-400 italic">Loading tour dates...</p>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <section id="books" class="py-24 px-6 bg-[#111]">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold">The <span class="accent-color">Author</span></h2>
+                <p class="text-gray-400 mt-4">Exploring the journey of a musician through words.</p>
+            </div>
+            <div id="books-container" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <p class="text-gray-400 italic col-span-full text-center">Loading publications...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="media" class="py-24 px-6 bg-[#0a0a0a]">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold">Performance <span class="accent-color">Reels</span></h2>
+                <p class="text-gray-400 mt-4">Stage presence, bass solos, and studio sessions.</p>
+            </div>
+            <div id="reels-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                 <p class="text-gray-400 italic col-span-full text-center">Loading media gallery...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-6 bg-[#111] relative border-t border-gray-800">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Bookings & <span class="accent-color">Inquiries</span></h2>
+            <p class="text-gray-400 mb-12 text-lg">Available for live concerts, studio sessions, and DJ sets.</p>
+            
+            <div class="glass-card p-8 md:p-12 rounded-lg text-left">
+                <form id="booking-form" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-2 uppercase tracking-wide">Name / Organization</label>
+                            <input type="text" class="w-full bg-[#0a0a0a] border border-gray-700 rounded py-3 px-4 text-white focus:outline-none focus:border-yellow-500" placeholder="Your Name">
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-2 uppercase tracking-wide">Event Type</label>
+                            <select class="w-full bg-[#0a0a0a] border border-gray-700 rounded py-3 px-4 text-white focus:outline-none focus:border-yellow-500">
+                                <option>Live Concert</option>
+                                <option>Studio Session Recording</option>
+                                <option>Bass DJ Set</option>
+                                <option>Other Inquiry</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm text-gray-400 mb-2 uppercase tracking-wide">Message Details (Date, Venue, etc.)</label>
+                        <textarea rows="4" class="w-full bg-[#0a0a0a] border border-gray-700 rounded py-3 px-4 text-white focus:outline-none focus:border-yellow-500" placeholder="Provide details about your event..."></textarea>
+                    </div>
+                    <button type="button" class="w-full bg-accent text-black font-bold uppercase tracking-wider py-4 rounded hover:bg-yellow-400 transition duration-300">
+                        Send Booking Request
+                    </button>
+                </form>
+            </div>
+
+            <div class="mt-16 flex justify-center space-x-6">
+                <a href="https://www.youtube.com/@paapuleftybass4126" target="_blank" class="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:bg-accent hover:text-black transition duration-300 text-xl"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:bg-accent hover:text-black transition duration-300 text-xl"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:bg-accent hover:text-black transition duration-300 text-xl"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#050505] py-8 text-center border-t border-gray-900">
+        <p class="text-gray-600 text-sm">&copy; 2026 Papu Leftybass. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-[#0a0a0a]', 'shadow-lg');
+                nav.classList.remove('glass-card');
+            } else {
+                nav.classList.remove('bg-[#0a0a0a]', 'shadow-lg');
+                nav.classList.add('glass-card');
+            }
+        });
+
+        // The logic to fetch and render data from Shows.json, Books.json, and Reels.json will go in your external main.js file
+    </script>
+</body>
+</html>
